@@ -1,0 +1,17 @@
+docker build -t dkrk8s .
+
+docker run -ti dkrk8s
+
+docker logout
+
+docker login
+
+docker tag dkrk8s <docker_hub_login_id/docker_hub_repo_name:desired_tag>
+
+docker push <docker_hub_login_id/docker_hub_repo_name:desired_tag>
+
+enable kubernetes on docker hub (Setting --> Kubernetes --> Tick "Enable Kubernetes")
+
+kubectl apply -f src/manifest.yaml
+
+kubectl logs <pod_name>
