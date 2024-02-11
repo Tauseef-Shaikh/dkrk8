@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dkrk8s
+  labels:
+    app: dkrk8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dkrk8s
+  template:
+    metadata:
+      labels:
+        app: dkrk8s
+    spec:
+      containers:
+      - name: dkrk8s-cntr
+        image: tauseefsk/dkrk8s-repo
